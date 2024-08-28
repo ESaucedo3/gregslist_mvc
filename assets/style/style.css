@@ -5,10 +5,22 @@
   object-fit: cover;
 }
 
+/* TODO Make note of this */
+.house-design {
+  height: 16rem; 
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
 .car-border {
   border: 3px solid;
 }
 
 label {
   display: block;
+}
+
+textarea {
+  resize: none;
 }

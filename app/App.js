@@ -1,19 +1,17 @@
-import { router } from './router-config.js';
-import { HomeController } from './controllers/HomeController.js';
-const USE_ROUTER = true
+import {router} from './router-config.js';
+// NOTE Router Enabled
+const USE_ROUTER = true;
 
 class App {
-
-  // NOTE today we will be registering controller in the router-config
+  // NOTE Single Page Application | Router will display necessary views based on URL
   constructor() {
     if (USE_ROUTER) {
-      this.router = router
-      this.router.init(this)
+      this.router = router;
+      this.router.init(this);
     }
   }
-
 }
 
-const app = new App()
+const app = new App();
 // @ts-ignore
-window.app = app
+window.app = app;

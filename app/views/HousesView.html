@@ -1,0 +1,63 @@
+<section class="container-fluid">
+  <div class="row my-1">
+    <div class="col-5">
+      <h3 class="text-center">Need to list a home?</h3>
+      <p class="text-center">Fill the form below</p>
+      <form class="border border-2 border-dark p-3" onsubmit="app.HousesController.createHouse()">
+        <div class="row">
+          <div class="col-md-6">
+            <label class="d-block form-label" for="year">Year</label>
+            <input class="form-control" type="number" name="year" id="year" required maxlength="4" min="1900" max="2025" placeholder="2019" />
+          </div>
+          <div class="col-md-6 mb-3">
+            <label class="d-block form-label" for="name">House Type</label>
+            <select id="name" name="name" class="form-select" required>
+              <option selected disabled value="">Select House Type</option>
+              <option value="Duplex">Duplex</option>
+              <option value="Cape Cod">Cape Code</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label class="d-block form-label" for="bedrooms">Bedrooms</label>
+            <input class="form-control" type="number" name="bedrooms" id="bedrooms" min="0" max="9" placeholder="4" required />
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label class="d-block form-label" for="bathrooms">Bathrooms</label>
+            <input class="form-control" type="number" name="bathrooms" id="bathrooms" min="0" max="9" placeholder="2" required />
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label class="d-block form-label" for="sqft">SqFt.</label>
+            <input class="form-control" type="number" name="sqft" id="sqft" placeholder="1600ft" required />
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label class="d-block form-label" for="price">Price</label>
+            <input class="form-control" type="number" name="price" id="price" placeholder="$110,000" required />
+          </div>
+
+          <div class="col-12 mb-3">
+            <label class="d-block form-label" for="description">House Description</label>
+            <textarea class="form-control" id="description" name="description" maxlength="5000" placeholder="House Description" rows="5"></textarea>
+          </div>
+
+          <div class="col-12 mb-3">
+            <label class="d-block form-label" for="imgUrl">House Image</label>
+            <input class="form-control" id="imgUrl" name="imgUrl" type="url" required maxlength="2000" placeholder="House Image..." />
+          </div>
+        </div>
+        <div class="mb-3 text-center">
+          <button class="btn btn-outline-dark rounded-pill px-3">List</button>
+        </div>
+      </form>
+    </div>
+    <div class="col-7">
+      <h2 class="text-center">Houses</h2>
+
+      <div id="house-list" class="row"></div>
+    </div>
+  </div>
+</section>
